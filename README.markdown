@@ -11,7 +11,7 @@ A web-based project for Fundamentals of Internet, creating a Valentine-themed pa
 - Glitch animations and neon styling on the About page.
 
 ## Setup
-1. Clone the repository: `git clone https://github.com/joshuaksamuel/assignment.git`
+1. Clone the repository: `git clone https://github.com/arpeli/valentines.git`
 2. Open `index.html` in a browser.
 3. Ensure `images/` contains `first.gif`, `happy.gif`, `heartbreak.gif`, and `fallback.jpg`.
 
@@ -25,7 +25,7 @@ A web-based project for Fundamentals of Internet, creating a Valentine-themed pa
 - Fridah Deraso - BSCCS/2025/35619
 - Joshua Kitonga - BSCCS/2025/40065
 - Finley Motari - BSCCS/2025/39262
-- Benie Macharia - BSCCS/2025/[TBD]
+- Benie Macharia - BSCCS/2025/39532
 - Derrick Nyangabi - BSCCS/2025/[TBD]
 - Rose Kioko - BSCCS/2025/[TBD]
 - Grace Wanyeki - BSCCS/2025/[TBD]
