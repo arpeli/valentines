@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Valentine Message Assignment for Fundamentals of Internet">
-    <title>Valentine Message</title>
+    <meta name="description" content="Contact us for the Valentine Assignment">
+    <title>Contact - Valentine Assignment</title>
     <link rel="stylesheet" href="styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=VT323&display=swap" rel="stylesheet">
@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html" aria-current="page">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">About</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="aboutDropdown">
                             <li><a class="dropdown-item" href="about.html#aristote"><img src="images/people/aristote.jpg" alt="Aristote Alphonse, team member" class="member-img">Aristote Alphonse</a></li>
                             <li><a class="dropdown-item" href="about.html#ariel"><img src="images/people/ariel.jpg" alt="Ariel Boutcher, team member" class="member-img">Ariel Boutcher</a></li>
@@ -37,40 +37,30 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="contact.html" aria-current="page">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main id="mainContent" class="container">
-        <p id="salutation" class="display-4">Hi, Will you be my valentine? 💖</p>
-        <picture>
-            <source src="images/first.gif" type="image/gif">
-            <img id="mainImage" src="images/fallback.jpg" alt="Valentine-themed animation" class="img-fluid rounded">
-        </picture>
-        <div class="button-group">
-            <button id="yes" class="btn btn-success">YES 💌</button>
-            <button id="no" class="btn btn-danger">NO 💔</button>
-        </div>
-    </main>
-    <div class="modal fade" id="nameModal" tabindex="-1" aria-labelledby="nameModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content p-3">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="nameModalLabel">What's your name? 😊</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <main class="container py-5">
+        <h1 class="display-4 text-center" style="font-family: 'Orbitron', sans-serif;">Contact Us</h1>
+        <section class="contact-form">
+            <div class="card p-4 mx-auto" style="max-width: 500px;">
+                <div class="mb-3">
+                    <label for="contactName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="contactName" placeholder="Enter your name" aria-describedby="contactNameError">
+                    <div id="contactNameError" class="text-danger mt-2" style="display: none;">Please enter a valid name.</div>
                 </div>
-                <div class="modal-body">
-                    <input type="text" id="nameInput" class="form-control" placeholder="Enter your name here..." aria-describedby="nameError">
-                    <div id="nameError" class="text-danger mt-2" style="display: none;">Please enter a valid name (letters, spaces, hyphens, or apostrophes).</div>
+                <div class="mb-3">
+                    <label for="contactMessage" class="form-label">Message</label>
+                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Your message..." aria-describedby="contactMessageError"></textarea>
+                    <div id="contactMessageError" class="text-danger mt-2" style="display: none;">Please enter a message.</div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="submitName">Submit</button>
-                </div>
+                <button type="button" class="btn btn-primary" onclick="submitContact()">Send</button>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/main.js"></script>
 </body>

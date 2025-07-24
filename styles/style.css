@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     background: #e91e63;
     color: #333;
 }
@@ -78,6 +78,7 @@ body {
 
 /* Main content for index.html */
 #mainContent {
+    font-family: 'Orbitron', sans-serif;
     text-align: center;
     margin: 100px auto;
     padding: 30px;
@@ -89,6 +90,7 @@ body {
 }
 
 #salutation {
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;
     color: #e91e63;
     margin-bottom: 20px;
@@ -103,7 +105,8 @@ body {
 .button-group {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
 #yes, #no {
@@ -151,6 +154,18 @@ body {
 
 #nameError {
     font-size: 0.9rem;
+}
+
+/* Contact page styles */
+.contact-form .card {
+    font-family: 'Orbitron', sans-serif;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-label {
+    color: #e91e63;
 }
 
 /* Hacker theme for about.html */
@@ -202,6 +217,11 @@ body.hacker-theme {
     clip-path: polygon(0 66%, 100% 66%, 100% 100%, 0 100%);
 }
 
+.glitch-active {
+    transform: skew(2deg);
+    text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+}
+
 @keyframes glitch {
     0%, 100% { transform: translate(0); }
     20% { transform: translate(-2px, 2px); }
@@ -235,9 +255,10 @@ body.hacker-theme {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+    cursor: pointer;
 }
 
-.member-card:hover {
+.member-card:hover, .member-card:focus {
     transform: translateY(-5px);
     box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
 }
@@ -299,5 +320,12 @@ body.hacker-theme {
     }
     .member-card {
         padding: 1rem;
+    }
+    .button-group {
+        gap: 10px;
+    }
+    #yes, #no {
+        padding: 8px 16px;
+        font-size: 0.9rem;
     }
 }

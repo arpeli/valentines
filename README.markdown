@@ -27,7 +27,7 @@ A web-based project for Fundamentals of Internet, creating a Valentine-themed pa
 - Finley Motari - BSCCS/2025/39262
 - Benie Macharia - BSCCS/2025/39532
 - Derrick Nyangabi - BSCCS/2025/[TBD]
-- Rose Kioko - BSCCS/2025/[TBD]
+- Rose Kioko - BSCCS/2025/39761
 - Grace Wanyeki - BSCCS/2025/[TBD]
 - Aristote Alphonse Kuji - BSCCS/2025/[TBD]
 - Abdalla - BSCCS/2025/[TBD]

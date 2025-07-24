@@ -21,75 +21,87 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="about.html">About</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="aboutDropdown" data-bs-toggle="dropdown" aria-expanded="false">About</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="about.html#aristote"><img src="images/people/aristote.jpg" alt="Aristote Alphonse, team member" class="member-img">Aristote Alphonse</a></li>
+                            <li><a class="dropdown-item" href="about.html#ariel"><img src="images/people/ariel.jpg" alt="Ariel Boutcher, team member" class="member-img">Ariel Boutcher</a></li>
+                            <li><a class="dropdown-item" href="about.html#benie"><img src="images/people/benie.jpeg" alt="Benie Macharia, team member" class="member-img">Benie Macharia</a></li>
+                            <li><a class="dropdown-item" href="about.html#derrick"><img src="images/people/derrick.jpg" alt="Derrick Nyangabi, team member" class="member-img">Derrick Nyangabi</a></li>
+                            <li><a class="dropdown-item" href="about.html#rose"><img src="images/people/rose.jpeg" alt="Rose Kioko, team member" class="member-img">Rose Kioko</a></li>
+                            <li><a class="dropdown-item" href="about.html#grace"><img src="images/people/grace.jpg" alt="Grace Wanyeki, team member" class="member-img">Grace Wanyeki</a></li>
+                            <li><a class="dropdown-item" href="about.html#finley"><img src="images/people/finley.jpg" alt="Finley Motari, team member" class="member-img">Finley Motari</a></li>
+                            <li><a class="dropdown-item" href="about.html#joshua"><img src="images/people/kitonga.png.jpeg" alt="Joshua Kitonga, team member" class="member-img">Joshua Kitonga</a></li>
+                            <li><a class="dropdown-item" href="about.html#fridah"><img src="images/people/fridah.JPG" alt="Fridah Deraso, team member" class="member-img">Fridah Deraso</a></li>
+                            <li><a class="dropdown-item" href="about.html#abdalla"><img src="images/people/abdalla.jpg" alt="Abdalla, team member" class="member-img">Abdalla</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-    <main class="hacker-main">
-        <h1 class="glitch" data-text="Meet the Cyber Crew">Meet the Cyber Crew</h1>
+    <main class="hacker-main container py-5">
+        <h1 class="glitch" data-text="Meet the Cyber Crew" aria-label="Meet the Cyber Crew">Meet the Cyber Crew</h1>
         <section class="member-grid">
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ariel Boutcher portrait" class="member-img">
+            <article class="member-card" id="aristote" tabindex="0" role="button" aria-label="View Aristote Alphonse profile" onclick="showMember('Aristote Alphonse', 'BSCCS/2025/[TBD]', 'Slicing through code like a digital katana.')">
+                <img src="images/people/aristote.jpg" alt="Aristote Alphonse, team member" class="member-img">
+                <h2>Aristote Alphonse</h2>
+                <p class="code">BSCCS/2025/[TBD]</p>
+                <p class="punchline">"Slicing through code like a digital katana."</p>
+            </article>
+            <article class="member-card" id="ariel" tabindex="0" role="button" aria-label="View Ariel Boutcher profile" onclick="showMember('Ariel Boutcher', 'BSCCS/2025/40350', 'Cracking code and hearts with equal precision.')">
+                <img src="images/people/ariel.jpg" alt="Ariel Boutcher, team member" class="member-img">
                 <h2>Ariel Boutcher</h2>
                 <p class="code">BSCCS/2025/40350</p>
                 <p class="punchline">"Cracking code and hearts with equal precision."</p>
             </article>
-            <article class="member-card">
-                <img src="images/people/fridah.JPG" alt="Fridah Deraso portrait" class="member-img">
-                <h2>Fridah Deraso</h2>
-                <p class="code">BSCCS/2025/35619</p>
-                <p class="punchline">"Hacking the matrix, one pixel at a time."</p>
-            </article>
-            <article class="member-card">
-                <img src="images/people/kitonga.png.jpeg" alt="Joshua Kitonga portrait" class="member-img">
-                <h2>Joshua Kitonga</h2>
-                <p class="code">BSCCS/2025/40065</p>
-                <p class="punchline">"Firewalls fear my binary charm."</p>
-            </article>
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Finley Motari portrait" class="member-img">
-                <h2>Finley Motari</h2>
-                <p class="code">BSCCS/2025/39262</p>
-                <p class="punchline">"Overclocking dreams in neon streams."</p>
-            </article>
-            <article class="member-card">
-                <img src="images/people/benie.jpeg" alt="Benie Macharia portrait" class="member-img">
+            <article class="member-card" id="benie" tabindex="0" role="button" aria-label="View Benie Macharia profile" onclick="showMember('Benie Macharia', 'BSCCS/2025/39532', 'Root access to the future.')">
+                <img src="images/people/benie.jpeg" alt="Benie Macharia, team member" class="member-img">
                 <h2>Benie Macharia</h2>
                 <p class="code">BSCCS/2025/39532</p>
                 <p class="punchline">"Root access to the future."</p>
             </article>
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Derrick Nyangabi portrait" class="member-img">
+            <article class="member-card" id="derrick" tabindex="0" role="button" aria-label="View Derrick Nyangabi profile" onclick="showMember('Derrick Nyangabi', 'BSCCS/2025/[TBD]', 'Debugging reality since \'25.')">
+                <img src="images/people/derrick.jpg" alt="Derrick Nyangabi, team member" class="member-img">
                 <h2>Derrick Nyangabi</h2>
                 <p class="code">BSCCS/2025/[TBD]</p>
                 <p class="punchline">"Debugging reality since '25."</p>
             </article>
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/women/33.jpg" alt="Rose Kioko portrait" class="member-img">
+            <article class="member-card" id="rose" tabindex="0" role="button" aria-label="View Rose Kioko profile" onclick="showMember('Rose Kioko', 'BSCCS/2025/[TBD]', 'Encrypting chaos with style.')">
+                <img src="images/people/rose.jpeg" alt="Rose Kioko, team member" class="member-img">
                 <h2>Rose Kioko</h2>
                 <p class="code">BSCCS/2025/[TBD]</p>
                 <p class="punchline">"Encrypting chaos with style."</p>
             </article>
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/women/55.jpg" alt="Grace Wanyeki portrait" class="member-img">
+            <article class="member-card" id="grace" tabindex="0" role="button" aria-label="View Grace Wanyeki profile" onclick="showMember('Grace Wanyeki', 'BSCCS/2025/[TBD]', 'Uploading elegance to the cloud.')">
+                <img src="images/people/grace.jpg" alt="Grace Wanyeki, team member" class="member-img">
                 <h2>Grace Wanyeki</h2>
                 <p class="code">BSCCS/2025/[TBD]</p>
                 <p class="punchline">"Uploading elegance to the cloud."</p>
             </article>
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Aristote Alphonse Kuji portrait" class="member-img">
-                <h2>Aristote Alphonse Kuji</h2>
-                <p class="code">BSCCS/2025/[TBD]</p>
-                <p class="punchline">"Slicing through code like a digital katana."</p>
+            <article class="member-card" id="finley" tabindex="0" role="button" aria-label="View Finley Motari profile" onclick="showMember('Finley Motari', 'BSCCS/2025/39262', 'Overclocking dreams in neon streams.')">
+                <img src="images/people/finley.jpg" alt="Finley Motari, team member" class="member-img">
+                <h2>Finley Motari</h2>
+                <p class="code">BSCCS/2025/39262</p>
+                <p class="punchline">"Overclocking dreams in neon streams."</p>
             </article>
-            <article class="member-card">
-                <img src="https://randomuser.me/api/portraits/men/66.jpg" alt="Abdalla portrait" class="member-img">
+            <article class="member-card" id="joshua" tabindex="0" role="button" aria-label="View Joshua Kitonga profile" onclick="showMember('Joshua Kitonga', 'BSCCS/2025/40065', 'Firewalls fear my binary charm.')">
+                <img src="images/people/kitonga.png.jpeg" alt="Joshua Kitonga, team member" class="member-img">
+                <h2>Joshua Kitonga</h2>
+                <p class="code">BSCCS/2025/40065</p>
+                <p class="punchline">"Firewalls fear my binary charm."</p>
+            </article>
+            <article class="member-card" id="fridah" tabindex="0" role="button" aria-label="View Fridah Deraso profile" onclick="showMember('Fridah Deraso', 'BSCCS/2025/35619', 'Hacking the matrix, one pixel at a time.')">
+                <img src="images/people/fridah.JPG" alt="Fridah Deraso, team member" class="member-img">
+                <h2>Fridah Deraso</h2>
+                <p class="code">BSCCS/2025/35619</p>
+                <p class="punchline">"Hacking the matrix, one pixel at a time."</p>
+            </article>
+            <article class="member-card" id="abdalla" tabindex="0" role="button" aria-label="View Abdalla profile" onclick="showMember('Abdalla', 'BSCCS/2025/[TBD]', 'Commanding the terminal with swagger.')">
+                <img src="images/people/abdalla.jpg" alt="Abdalla, team member" class="member-img">
                 <h2>Abdalla</h2>
                 <p class="code">BSCCS/2025/[TBD]</p>
                 <p class="punchline">"Commanding the terminal with swagger."</p>
