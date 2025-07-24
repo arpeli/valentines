@@ -42,5 +42,7 @@ Ms. Linda Sawe
 
 ## Screenshots
 - Home Page: ![Home page Screenshot](/images/screenshots/home.png)
-- About Page: [Insert screenshot path or URL]
-- Contact Page: [Insert screenshot path or URL]
+- About Page: ![About Page Screenshot](images/screenshots/about1.png)
+![about page](images/screenshots/about2.png)
+![about page](images/screenshots/about3.png)
+- Contact Page: ![contact page screenshot](images/screenshots/contact.png)
