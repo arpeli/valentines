@@ -6,7 +6,7 @@ A web-based project for Fundamentals of Internet, creating a Valentine-themed pa
 - Personalized Valentine message with name input via a modal.
 - YES/NO buttons to display different GIFs (`happy.gif`, `heartbreak.gif`).
 - Responsive navbar with links to Home, About, and Contact.
-- About page with a cyberpunk hacker vibe, showcasing group members with names, student codes, images, and punchlines.
+- About page with showcasing group members with names, student codes, images, and punchlines.
 - Responsive design with media queries for all devices.
 - Glitch animations and neon styling on the About page.
 

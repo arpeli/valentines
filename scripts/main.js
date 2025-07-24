@@ -19,12 +19,12 @@ function showMember(name, code, punchline) {
     modal._element.innerHTML = `
         <div class="modal fade" tabindex="-1" aria-labelledby="memberModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
+                <div class="modal-content" style="background: #1a1a1a; border: 2px solid #00ff88; box-shadow: 0 0 15px #00ff88;">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="memberModalLabel">${name}</h5>
+                        <h5 class="modal-title" style="font-family: 'Orbitron', sans-serif; color: #ff00ff; text-shadow: 0 0 5px #ff00ff;">${name}</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" style="font-family: 'VT323', monospace; color: #00ffff;">
                         <p>Student Code: ${code}</p>
                         <p>Punchline: ${punchline}</p>
                     </div>
@@ -59,6 +59,42 @@ function submitContact() {
         document.getElementById('contactName').value = '';
         document.getElementById('contactMessage').value = '';
     }
+}
+
+// Matrix rain effect
+function initMatrixRain() {
+    const canvas = document.getElementById('matrixCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array(Math.floor(columns)).fill(0);
+
+    function draw() {
+        ctx.fillStyle = 'rgba(10, 10, 35, 0.1)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#00ff88';
+        ctx.font = `${fontSize}px 'Share Tech Mono', monospace`;
+
+        for (let i = 0; i < drops.length; i++) {
+            const char = chars.charAt(Math.floor(Math.random() * chars.length));
+            ctx.fillText(char, i * fontSize, drops[i] * fontSize);
+            if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+
+    setInterval(draw, 50);
+    window.addEventListener('resize', () => {
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+    });
 }
 
 if (document.getElementById('mainContent')) {
@@ -118,10 +154,21 @@ if (document.getElementById('mainContent')) {
 
 if (document.querySelector('.hacker-main')) {
     console.log('About page loaded');
+    initMatrixRain();
     const glitchElements = document.querySelectorAll('.glitch');
     glitchElements.forEach(el => {
         setInterval(() => {
             el.classList.toggle('glitch-active');
-        }, 2000); // Reduced to 2s for smoother effect
+        }, 1500); // Faster for more dynamic effect
+    });
+
+    const memberCards = document.querySelectorAll('.member-card');
+    memberCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('glitch-active');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('glitch-active');
+        });
     });
 }

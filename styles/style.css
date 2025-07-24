@@ -13,8 +13,8 @@ body {
 
 /* Navbar styles */
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #0a0a23;
+    box-shadow: 0 0 10px #00ff88, 0 0 20px #ff00ff;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,20 +22,30 @@ body {
 }
 
 .navbar-brand {
+    font-family: 'Orbitron', sans-serif;
     font-weight: bold;
-    color: #e91e63 !important;
-    transition: color 0.3s;
+    color: #00ff88 !important;
+    text-shadow: 0 0 5px #00ff88;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #ff00ff !important;
+    text-shadow: 0 0 10px #ff00ff;
 }
 
 .navbar-nav .nav-link {
-    color: #333;
+    font-family: 'VT323', monospace;
+    color: #00ffff;
     font-weight: 500;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #e91e63;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -44,17 +54,21 @@ body {
 }
 
 .dropdown-menu {
+    background-color: #1a1a1a;
+    border: 2px solid #00ff88;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #00ff88;
 }
 
 .dropdown-item {
-    transition: background-color 0.3s ease;
+    font-family: 'VT323', monospace;
+    color: #00ffff;
+    transition: background-color 0.3s ease, color 0.3s;
 }
 
 .dropdown-item:hover {
-    background-color: #ffe4f0;
+    background-color: #ff00ff;
+    color: #0a0a23;
 }
 
 .dropdown-item img.member-img {
@@ -62,6 +76,7 @@ body {
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
+    border: 2px solid #ff00ff;
     margin-right: 10px;
 }
 
@@ -82,17 +97,19 @@ body {
     text-align: center;
     margin: 100px auto;
     padding: 30px;
-    background-color: white;
+    background-color: #1a1a1a;
+    border: 2px solid #00ff88;
     border-radius: 20px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px #00ff88;
 }
 
 #salutation {
     font-family: 'Orbitron', sans-serif;
     font-size: 1.8rem;
-    color: #e91e63;
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
     margin-bottom: 20px;
 }
 
@@ -100,6 +117,7 @@ body {
     max-width: 250px;
     width: 100%;
     border-radius: 10px;
+    border: 2px solid #00ffff;
 }
 
 .button-group {
@@ -112,73 +130,99 @@ body {
 #yes, #no {
     padding: 10px 20px;
     font-size: 1rem;
-    border: none;
+    font-family: 'VT323', monospace;
+    border: 2px solid #00ff88;
     border-radius: 30px;
     transition: all 0.3s ease;
 }
 
 #yes {
     background-color: #ff4081;
-    color: white;
+    color: #00ff88;
 }
 
 #yes:hover {
-    background-color: #e91e63;
+    background-color: #ff00ff;
     transform: scale(1.05);
+    box-shadow: 0 0 10px #ff00ff;
 }
 
 #no {
     background-color: #f8bbd0;
-    color: #333;
+    color: #0a0a23;
 }
 
 #no:hover {
-    background-color: #f48fb1;
+    background-color: #00ffff;
     transform: scale(1.05);
+    box-shadow: 0 0 10px #00ffff;
 }
 
 #nameInput {
     height: 50px;
-    border: 3px solid #f48fb1;
+    border: 3px solid #ff00ff;
+    font-family: 'VT323', monospace;
 }
 
 #submitName {
-    background-color: #f48fb1;
-    color: white;
+    background-color: #ff00ff;
+    color: #00ff88;
+    font-family: 'VT323', monospace;
     width: 100%;
 }
 
 #submitName:hover {
-    background-color: #e91e63;
+    background-color: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
 }
 
 #nameError {
     font-size: 0.9rem;
+    font-family: 'VT323', monospace;
 }
 
 /* Contact page styles */
 .contact-form .card {
     font-family: 'Orbitron', sans-serif;
-    background-color: white;
+    background-color: #1a1a1a;
+    border: 2px solid #00ff88;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px #00ff88;
 }
 
 .contact-form .form-label {
-    color: #e91e63;
+    color: #ff00ff;
+    font-family: 'VT323', monospace;
 }
 
 /* Hacker theme for about.html */
 body.hacker-theme {
-    background: #0d0d0d;
+    background: #0a0a23;
     color: #00ff88;
     font-family: 'VT323', monospace;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Matrix rain effect */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
 }
 
 .hacker-main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 2rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 20px #00ff88;
+    border-radius: 15px;
 }
 
 .hacker-main h1 {
@@ -186,8 +230,8 @@ body.hacker-theme {
     color: #00ff88;
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 2.5rem;
-    text-shadow: 0 0 10px #00ff88;
+    font-size: 2.8rem;
+    text-shadow: 0 0 10px #00ff88, 0 0 20px #ff00ff;
 }
 
 .glitch {
@@ -224,26 +268,28 @@ body.hacker-theme {
 
 @keyframes glitch {
     0%, 100% { transform: translate(0); }
-    20% { transform: translate(-2px, 2px); }
-    40% { transform: translate(2px, -2px); }
+    20% { transform: translate(-3px, 3px); }
+    40% { transform: translate(3px, -3px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
 }
 
 @keyframes glitch-left {
     0%, 100% { transform: translate(0); }
-    20% { transform: translate(-3px, 0); }
-    40% { transform: translate(3px, 0); }
+    20% { transform: translate(-4px, 0); }
+    40% { transform: translate(4px, 0); }
 }
 
 @keyframes glitch-right {
     0%, 100% { transform: translate(0); }
-    20% { transform: translate(2px, 0); }
-    40% { transform: translate(-2px, 0); }
+    20% { transform: translate(3px, 0); }
+    40% { transform: translate(-3px, 0); }
 }
 
 .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
     padding: 1rem;
 }
 
@@ -253,79 +299,101 @@ body.hacker-theme {
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
     box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
 .member-card:hover, .member-card:focus {
-    transform: translateY(-5px);
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.8);
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
+    border-color: #ff00ff;
+}
+
+.member-card:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 255, 136, 0.2), rgba(255, 0, 255, 0.2));
+    animation: glitch-overlay 1s infinite;
+}
+
+@keyframes glitch-overlay {
+    0% { transform: translate(0); opacity: 0.3; }
+    50% { transform: translate(2px, -2px); opacity: 0.5; }
+    100% { transform: translate(-2px, 2px); opacity: 0.3; }
 }
 
 .member-card img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 3px solid #ff00ff;
     margin-bottom: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.member-card img:hover {
+    border-color: #00ffff;
+    box-shadow: 0 0 10px #00ffff;
 }
 
 .member-card h2 {
     font-family: 'Orbitron', sans-serif;
     color: #ff00ff;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 0.5rem;
+    text-shadow: 0 0 5px #ff00ff;
 }
 
 .member-card .code {
     color: #00ffff;
-    font-size: 1rem;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
 }
 
 .member-card .punchline {
     color: #ffffff;
+    font-family: 'Share Tech Mono', monospace;
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 /* Responsive design */
 @media (max-width: 768px) {
     .hacker-main h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .member-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
     .member-card img {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
     }
 }
 
 @media (max-width: 576px) {
-    #mainContent {
-        margin-top: 50px;
-        padding: 20px;
-    }
-    #salutation {
-        font-size: 1.5rem;
-    }
-    #mainImage {
-        max-width: 200px;
-    }
     .hacker-main {
         padding: 1rem;
     }
     .member-card {
         padding: 1rem;
     }
-    .button-group {
-        gap: 10px;
+    .hacker-main h1 {
+        font-size: 1.8rem;
     }
-    #yes, #no {
-        padding: 8px 16px;
+    .member-card h2 {
+        font-size: 1.4rem;
+    }
+    .member-card .punchline {
         font-size: 0.9rem;
     }
 }
