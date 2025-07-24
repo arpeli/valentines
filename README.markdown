@@ -37,8 +37,8 @@ A web-based project for Fundamentals of Internet, creating a Valentine-themed pa
 Ms. Linda Sawe
 
 ## Deployment
--Deployed on GitHub Pages: https://arpeli.github.io/valentines
--Deployed on Vercel: https://valentines.arpeli.com 
+- Deployed on GitHub Pages: https://arpeli.github.io/valentines
+- Deployed on Vercel: https://valentines.arpeli.com 
 
 ## Screenshots
 - Home Page: ![Home page Screenshot](/images/screenshots/home.png)
