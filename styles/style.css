@@ -11,10 +11,10 @@ body {
     color: #333;
 }
 
-/* Navbar styles */
+/* Navbar styles for index.html and contact.html */
 .navbar {
-    background-color: #0a0a23;
-    box-shadow: 0 0 10px #00ff88, 0 0 20px #ff00ff;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,30 +22,27 @@ body {
 }
 
 .navbar-brand {
-    font-family: 'Orbitron', sans-serif;
-    font-weight: bold;
-    color: #00ff88 !important;
-    text-shadow: 0 0 5px #00ff88;
+    font-family: 'Pacifico', cursive;
+    font-weight: normal;
+    color: #e91e63 !important;
     transition: color 0.3s, text-shadow 0.3s;
 }
 
 .navbar-brand:hover {
-    color: #ff00ff !important;
-    text-shadow: 0 0 10px #ff00ff;
+    color: #ff4081 !important;
+    text-shadow: 0 0 5px #ff4081;
 }
 
 .navbar-nav .nav-link {
-    font-family: 'VT323', monospace;
-    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    color: #333;
     font-weight: 500;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, text-shadow 0.3s;
+    transition: color 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
-    color: #ff00ff;
-    text-shadow: 0 0 5px #ff00ff;
+    color: #ff4081;
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -54,21 +51,21 @@ body {
 }
 
 .dropdown-menu {
-    background-color: #1a1a1a;
-    border: 2px solid #00ff88;
+    background-color: #fff;
+    border: 2px solid #f48fb1;
     border-radius: 10px;
-    box-shadow: 0 0 10px #00ff88;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-item {
-    font-family: 'VT323', monospace;
-    color: #00ffff;
+    font-family: 'Orbitron', sans-serif;
+    color: #333;
     transition: background-color 0.3s ease, color 0.3s;
 }
 
 .dropdown-item:hover {
-    background-color: #ff00ff;
-    color: #0a0a23;
+    background-color: #ffe4f0;
+    color: #e91e63;
 }
 
 .dropdown-item img.member-img {
@@ -76,7 +73,7 @@ body {
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid #ff00ff;
+    border: 2px solid #f48fb1;
     margin-right: 10px;
 }
 
@@ -97,27 +94,55 @@ body {
     text-align: center;
     margin: 100px auto;
     padding: 30px;
-    background-color: #1a1a1a;
-    border: 2px solid #00ff88;
+    background-color: #fff;
+    border: 2px solid #f48fb1;
     border-radius: 20px;
     width: 90%;
     max-width: 500px;
-    box-shadow: 0 0 20px #00ff88;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+#mainContent::before {
+    content: '💕';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: heartPulse 2s infinite;
+}
+
+#mainContent::after {
+    content: '💕';
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: heartPulse 2s infinite 1s;
+}
+
+@keyframes heartPulse {
+    0% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.2); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 0.3; }
 }
 
 #salutation {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.8rem;
-    color: #ff00ff;
-    text-shadow: 0 0 5px #ff00ff;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: #e91e63;
     margin-bottom: 20px;
+    text-shadow: 0 0 5px #ff4081;
 }
 
 #mainImage {
     max-width: 250px;
     width: 100%;
     border-radius: 10px;
-    border: 2px solid #00ffff;
+    border: 2px solid #ff4081;
 }
 
 .button-group {
@@ -130,69 +155,91 @@ body {
 #yes, #no {
     padding: 10px 20px;
     font-size: 1rem;
-    font-family: 'VT323', monospace;
-    border: 2px solid #00ff88;
+    font-family: 'Orbitron', sans-serif;
+    border: none;
     border-radius: 30px;
     transition: all 0.3s ease;
 }
 
 #yes {
     background-color: #ff4081;
-    color: #00ff88;
+    color: #fff;
 }
 
 #yes:hover {
-    background-color: #ff00ff;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #ff00ff;
+    background-color: #e91e63;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ff4081;
 }
 
 #no {
     background-color: #f8bbd0;
-    color: #0a0a23;
+    color: #333;
 }
 
 #no:hover {
-    background-color: #00ffff;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #00ffff;
+    background-color: #f48fb1;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #f48fb1;
 }
 
 #nameInput {
     height: 50px;
-    border: 3px solid #ff00ff;
-    font-family: 'VT323', monospace;
+    border: 3px solid #f48fb1;
+    font-family: 'Orbitron', sans-serif;
 }
 
 #submitName {
-    background-color: #ff00ff;
-    color: #00ff88;
-    font-family: 'VT323', monospace;
+    background-color: #ff4081;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
     width: 100%;
 }
 
 #submitName:hover {
-    background-color: #00ffff;
-    box-shadow: 0 0 10px #00ffff;
+    background-color: #e91e63;
+    box-shadow: 0 0 10px #e91e63;
 }
 
 #nameError {
     font-size: 0.9rem;
-    font-family: 'VT323', monospace;
+    font-family: 'Orbitron', sans-serif;
 }
 
 /* Contact page styles */
 .contact-form .card {
     font-family: 'Orbitron', sans-serif;
-    background-color: #1a1a1a;
-    border: 2px solid #00ff88;
+    background-color: #fff;
+    border: 2px solid #f48fb1;
     border-radius: 20px;
-    box-shadow: 0 0 20px #00ff88;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.contact-form .card::before {
+    content: '💌';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    animation: heartPulse 2s infinite;
 }
 
 .contact-form .form-label {
-    color: #ff00ff;
-    font-family: 'VT323', monospace;
+    color: #e91e63;
+    font-family: 'Pacifico', cursive;
+}
+
+.contact-form .btn-primary {
+    background-color: #ff4081;
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: #e91e63;
+    box-shadow: 0 0 10px #e91e63;
 }
 
 /* Hacker theme for about.html */
@@ -202,6 +249,54 @@ body.hacker-theme {
     font-family: 'VT323', monospace;
     position: relative;
     overflow-x: hidden;
+}
+
+body.hacker-theme .navbar {
+    background-color: #0a0a23;
+    box-shadow: 0 0 10px #00ff88, 0 0 20px #ff00ff;
+}
+
+body.hacker-theme .navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    color: #00ff88 !important;
+    text-shadow: 0 0 5px #00ff88;
+}
+
+body.hacker-theme .navbar-brand:hover {
+    color: #ff00ff !important;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+body.hacker-theme .navbar-nav .nav-link {
+    font-family: 'VT323', monospace;
+    color: #00ffff;
+    font-size: 1.2rem;
+}
+
+body.hacker-theme .navbar-nav .nav-link:hover,
+body.hacker-theme .navbar-nav .nav-link.active {
+    color: #ff00ff;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+body.hacker-theme .dropdown-menu {
+    background-color: #1a1a1a;
+    border: 2px solid #00ff88;
+    box-shadow: 0 0 10px #00ff88;
+}
+
+body.hacker-theme .dropdown-item {
+    font-family: 'VT323', monospace;
+    color: #00ffff;
+}
+
+body.hacker-theme .dropdown-item:hover {
+    background-color: #ff00ff;
+    color: #0a0a23;
+}
+
+body.hacker-theme .dropdown-item img.member-img {
+    border: 2px solid #ff00ff;
 }
 
 /* Matrix rain effect */
@@ -381,6 +476,16 @@ body.hacker-theme {
 }
 
 @media (max-width: 576px) {
+    #mainContent {
+        margin-top: 50px;
+        padding: 20px;
+    }
+    #salutation {
+        font-size: 1.6rem;
+    }
+    #mainImage {
+        max-width: 200px;
+    }
     .hacker-main {
         padding: 1rem;
     }
@@ -394,6 +499,13 @@ body.hacker-theme {
         font-size: 1.4rem;
     }
     .member-card .punchline {
+        font-size: 0.9rem;
+    }
+    .button-group {
+        gap: 10px;
+    }
+    #yes, #no {
+        padding: 8px 16px;
         font-size: 0.9rem;
     }
 }
